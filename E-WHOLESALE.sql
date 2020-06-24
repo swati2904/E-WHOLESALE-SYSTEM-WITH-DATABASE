@@ -19,3 +19,10 @@ price INT NOT NULL,
 product_description VARCHAR(100)
 );
 
+create table user(
+user_id varchar(50) primary key not null, 
+customer_id varchar(50),
+username varchar(100) not null , 
+password varchar(100) not null
+);
+--select user_id,customer_id from user where username = 'swati' and password = 'swati123';
