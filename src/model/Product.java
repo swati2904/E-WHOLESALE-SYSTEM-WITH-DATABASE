@@ -1,11 +1,23 @@
 package model;
 
 public class Product {
+
 	private String productId;
 	private String productName;
-	private String description;
-	private int productPrice;
-	
+	private int price;
+	private String Description;
+
+	public Product(String id, String name, int price, String desc) {
+		this.productId = id;
+		this.productName = name;
+		this.price = price;
+		this.Description = desc;
+	}
+
+	public Product() {
+
+	}
+
 	public String getProductId() {
 		return productId;
 	}
@@ -22,26 +34,19 @@ public class Product {
 		this.productName = productName;
 	}
 
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	public String getDescription() {
-		return description;
+		return Description;
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		Description = description;
 	}
-
-	public int getProductPrice() {
-		return productPrice;
-	}
-
-	public void setProductPrice(int productPrice) {
-		this.productPrice = productPrice;
-	}
-	
-	 public Product(String productId, String productName, String description, int productPrice) {
-			this.productId = productId;
-			this.productName = productName;
-			this.description = description;
-			this.productPrice = productPrice;
-	   }
 }
