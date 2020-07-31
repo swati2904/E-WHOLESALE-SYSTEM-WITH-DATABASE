@@ -10,6 +10,10 @@ gender varchar(10),
 age int,
 contact varchar(20));
 desc customer;
+
+drop table customer;
+
+
  ----------------------------------------------------------------------------------------------------------------------------
 
 -- TABLE FOR USER INFORMATION
@@ -54,6 +58,7 @@ custid varchar(20) not null,
 orderdate date,
 FOREIGN key (custid) references customer(custid));
 desc orders;
+drop TABLE orders;
 
  ----------------------------------------------------------------------------------------------------------------------------
 
@@ -101,8 +106,8 @@ desc payment;
 
 
 desc orders;
-ALTER TABLE orders
-drop column quantity; 
+--ALTER TABLE orders
+--drop column quantity; 
 --delete from orders where custid=1;
 --delete from stock;
 
@@ -115,6 +120,32 @@ select * from orderdetails;
 select * from shipment;
 select * from payment;
 select * from stock;
+
+
+--__________________________________________________PROCESS  DELETING THE CONSTRAIN_________________________________________________________-
+DELETE FROM customer
+WHERE custid = 8;
+--
+--select * from custid
+--   where constraint_name = 'SYS_C007137';
+
+ SELECT owner, constraint_name, constraint_type, table_name, r_owner, r_constraint_name
+    FROM all_constraints
+    WHERE owner='SYSTEM'
+      AND constraint_name='SYS_C007137';
+      
+       SELECT owner, constraint_name, constraint_type, table_name, r_owner, r_constraint_name
+    FROM all_constraints
+    WHERE owner='SYSTEM'
+      AND constraint_name='SYS_C007132';
+      
+      SELECT * FROM all_cons_columns
+  WHERE owner='SYSTEM'
+    AND constraint_name = 'SYS_C007132';
+    
+    select * from customer where custid in ( select custid from userdetails1 where userid = 4);
+    
+------------------------------------------------------------------------------------------------------------------------------------------
 
 --select product.id,product.name,product.price,product.description,stock.quantity from product inner join stock on product.name = stock.stockid
 --where product.name='shirt';
@@ -171,3 +202,24 @@ inner join payment on shipment.ordrid = payment.ordid
 where customerid = 1;
 
 desc orders;
+
+
+
+
+
+--
+SELECT * FROM v$version;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

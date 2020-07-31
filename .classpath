@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/swati/Downloads/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="/home/swati/Downloads/itextpdf-5.4.0.jar"/>
-	<classpathentry kind="lib" path="/home/swati/Downloads/poi-ooxml-schemas-3.15.0.jar"/>
-	<classpathentry kind="lib" path="/home/swati/Downloads/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="/home/swati/Downloads/jarfiles/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="/home/swati/Downloads/jarfiles/poi-ooxml-schemas-3.15.0.jar"/>
+	<classpathentry kind="lib" path="/home/swati/Downloads/jarfiles/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="/home/swati/Downloads/jarfiles/itextpdf-5.4.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
